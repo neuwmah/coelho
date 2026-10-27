@@ -1,0 +1,22 @@
+<header class="site-header">
+  <a href="/" class="brand" (click)="goHome($event)">coelho</a>
+  <nav class="nav">
+    <button
+      type="button"
+      class="theme-toggle"
+      [class.is-on]="theme.dark()"
+      [attr.aria-pressed]="theme.dark()"
+      aria-label="Toggle color theme"
+      (click)="theme.toggle()"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M9 18h6m-5 3h4M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7Z"
+        />
+      </svg>
+    </button>
+    <a href="#experience" (click)="goSection('experience', $event)">Experience</a>
+    <a href="#projects" (click)="goSection('projects', $event)">Projects</a>
+    <a href="#contact" (click)="goSection('contact', $event)">Contact</a>
+  </nav>
+</header>

@@ -1,0 +1,22 @@
+<app-section-heading title="Side Projects" />
+
+<div class="projects-list">
+  @for (project of projects(); track project.id) {
+    <article class="project-row">
+      @if (iconFor(project.slug); as icon) {
+        <img class="project-icon" [src]="icon" [alt]="project.title" width="32" height="32" />
+      }
+      <div class="project-main">
+        <h2>{{ project.title }}</h2>
+        @if (project.repo_url) {
+          <a [href]="project.repo_url" target="_blank" rel="noopener" class="details">GitHub Repository</a>
+        }
+      </div>
+      <div class="stack">
+        @for (tech of project.tech_stack; track tech) {
+          <span>{{ tech }}</span>
+        }
+      </div>
+    </article>
+  }
+</div>

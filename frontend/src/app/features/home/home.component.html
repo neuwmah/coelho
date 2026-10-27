@@ -1,0 +1,42 @@
+<section id="home" class="page-section">
+  @if (bio(); as bioData) {
+    <div class="hero">
+      <div class="hero-copy">
+        <h1>{{ bioData.full_name }}</h1>
+        <p class="headline">{{ bioData.headline }}</p>
+        <p class="summary">{{ bioData.summary }}</p>
+        <p class="summary-mobile">{{ bioData.summary_mobile }}</p>
+        <div class="actions">
+          <a href="#projects" class="btn primary" (click)="goSection('projects', $event)">View projects</a>
+          <a href="#contact" class="btn ghost" (click)="goSection('contact', $event)">Get in touch</a>
+        </div>
+        <ul class="skills">
+          @for (skill of bioData.skills; track skill) {
+            <li>{{ skill }}</li>
+          }
+        </ul>
+      </div>
+      @if (bioData.avatar_url) {
+        <img [src]="bioData.avatar_url" [alt]="bioData.full_name" class="avatar" />
+      }
+    </div>
+  }
+</section>
+
+<section id="experience" class="page-section">
+  @if (showExperience()) {
+    <app-experience [experiences]="experiences()!" />
+  }
+</section>
+
+<section id="projects" class="page-section">
+  @if (showProjects()) {
+    <app-projects [projects]="projects()!" />
+  }
+</section>
+
+<section id="contact" class="page-section">
+  @if (showContact()) {
+    <app-contact [channels]="channels()!" />
+  }
+</section>

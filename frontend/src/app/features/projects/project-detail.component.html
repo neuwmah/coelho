@@ -1,0 +1,22 @@
+<a routerLink="/projects" class="back">← Back to projects</a>
+
+@if (project$ | async; as project) {
+  <article class="detail">
+    <h1>{{ project.title }}</h1>
+    <p class="summary">{{ project.summary }}</p>
+    <p class="description">{{ project.description }}</p>
+    <div class="stack">
+      @for (tech of project.tech_stack; track tech) {
+        <span>{{ tech }}</span>
+      }
+    </div>
+    <div class="links">
+      @if (project.live_url) {
+        <a [href]="project.live_url" target="_blank" rel="noopener">Live site</a>
+      }
+      @if (project.repo_url) {
+        <a [href]="project.repo_url" target="_blank" rel="noopener">Repository</a>
+      }
+    </div>
+  </article>
+}

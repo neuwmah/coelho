@@ -1,0 +1,26 @@
+<app-section-heading title="Work History" />
+
+<ol class="timeline">
+  @for (item of experiences(); track item.id) {
+    <li>
+      <div class="meta">
+        <h2>{{ item.role }}</h2>
+        <p class="company">{{ item.company }} · {{ item.location }}</p>
+        <p class="dates">
+          {{ item.started_on | date: 'MMM yyyy' }}
+          –
+          @if (item.current) {
+            Present
+          } @else {
+            {{ item.ended_on | date: 'MMM yyyy' }}
+          }
+        </p>
+      </div>
+      <ul>
+        @for (highlight of item.highlights; track highlight) {
+          <li>{{ highlight }}</li>
+        }
+      </ul>
+    </li>
+  }
+</ol>

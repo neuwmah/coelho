@@ -1,0 +1,23 @@
+<app-section-heading title="Contact Info" />
+
+<div class="contact-grid">
+  @for (channel of channels(); track channel.id) {
+    @if (channel.href) {
+      <a class="contact-card" [href]="channel.href" target="_blank" rel="noopener">
+        <img class="contact-icon" [src]="channel.icon" [alt]="channel.title" width="28" height="28" />
+        <div class="contact-copy">
+          <h2>{{ channel.title }}</h2>
+          <p>{{ channel.subtitle }}</p>
+        </div>
+      </a>
+    } @else {
+      <div class="contact-card">
+        <img class="contact-icon" [src]="channel.icon" [alt]="channel.title" width="28" height="28" />
+        <div class="contact-copy">
+          <h2>{{ channel.title }}</h2>
+          <p>{{ channel.subtitle }}</p>
+        </div>
+      </div>
+    }
+  }
+</div>

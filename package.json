@@ -1,0 +1,8 @@
+{
+  "name": "coelho-wiki",
+  "private": true,
+  "scripts": {
+    "deploy": "bash ./scripts/deploy.sh",
+    "deploy:setup": "bash ./scripts/deploy.sh --setup"
+  }
+}
