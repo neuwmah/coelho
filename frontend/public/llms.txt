@@ -1,0 +1,15 @@
+# Guilherme Neumann
+
+> Personal site of Guilherme Neumann, a full-stack developer. One page with a short bio, experience, selected projects, and contact links.
+
+## Sections
+
+- [Home](https://coelho.wiki/): bio, headline, and skills
+- [Experience](https://coelho.wiki/#experience): work history
+- [Projects](https://coelho.wiki/#projects): selected projects
+- [Contact](https://coelho.wiki/#contact): how to get in touch
+
+## Elsewhere
+
+- [GitHub](https://github.com/neuwmah): public repositories
+- [LinkedIn](https://linkedin.com/in/guilherme-neumann): profile
