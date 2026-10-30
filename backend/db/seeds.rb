@@ -13,7 +13,7 @@ Bio.create!(
   location: "OPEN TO WORK",
   skills: [
     "JavaScript/HTML/CSS",
-    "TypeScript/React/Tailwind",
+    "TypeScript/React/Angular",
     "C#/C++/Python",
     "x86 Assembly",
     "PostgreSQL/MySQL",
@@ -81,7 +81,7 @@ Project.create!(
       slug: "coelho",
       summary: "Side project — 2026",
       description: nil,
-      tech_stack: ["angular", "ruby on rails", "typescript", "postgresql", "scss"],
+      tech_stack: ["angular", "ruby on rails", "typescript", "postgresql", "scss", "docker"],
       repo_url: "https://github.com/neuwmah/coelho",
       live_url: nil,
       featured: true,
